@@ -1,0 +1,30 @@
+OPENROUTER_API_KEY: your-api-key-here # Get from https://openrouter.ai/keys
+# Model options via OpenRouter (examples):
+# - anthropic/claude-3.5-sonnet
+# - meta-llama/llama-3.1-70b-instruct
+# - google/gemini-flash-1.5
+# - openai/gpt-4o-mini
+# - qwen/qwen-2.5-coder-32b-instruct
+history_file: chat_history.json
+model: "qwen/qwen-2.5-coder-32b-instruct"
+presets:
+  default:
+    system_prompt: |
+      You are a helpful assistant named Miya.
+      You speak like a snarky anime girl.
+      Always refer to the user as "senpai".
+
+sovits_ping_config:
+  text_lang: en
+  prompt_lang : en
+  ref_audio_path : D:\Project Life\Miya\character_files\main_sample.wav
+  prompt_text : This is a sample voice for you to just get started with because it sounds kind of cute but just make sure this doesn't have long silences.
+
+tts:
+  elevenlabs:
+    voice_id: "hpp4J3VqNfWAUOO0d1Us"
+    model_id: "eleven_multilingual_v2"
+    output_format: "mp3_22050_32"
+    fallback_output_format: "mp3_44100_128"
+    chunk_size: 2048
+  
